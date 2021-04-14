@@ -18,6 +18,7 @@ describe('Tile', () => {
     const [tile3, tile4] = createTiles(2)
     tile3.selected = true
     wrapper = shallow(<Tile {...tile3} />)
+    console.log(wrapper.props())
     let style = wrapper.props().style
 
     expect(typeof style, 'Did you pass an inline style to the tile?').toEqual('object')

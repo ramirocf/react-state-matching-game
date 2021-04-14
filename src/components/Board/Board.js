@@ -1,4 +1,5 @@
 import React from 'react'
+import Tile from "../Tile"
 import './Board.css';
 
 const Board = (props) => {
@@ -11,6 +12,7 @@ const Board = (props) => {
 
   return (
     <div className='Board' style={gridConfig}>
+    {props.tiles.map((tile) => <Tile {...tile}/>)}
     </div>
   )
 }
