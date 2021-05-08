@@ -6,7 +6,8 @@ const Tile = (props) => {
   return (
     <div 
       className='Tile'
-      style={(props.selected || props.matched)? {backgroundColor: props.color}: null}>
+      style={(props.selected || props.matched)? {backgroundColor: props.color}: null}
+      onClick={() => props.handleTileClicked(props.id, props.color)}>
       {(props.selected || props.matched)? <props.svg />: null}
     </div>
   )
